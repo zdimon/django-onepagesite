@@ -20,3 +20,10 @@ urlpatterns = [
     path('', index),
     path('admin/', admin.site.urls),
 ]
+
+from .settings import MEDIA_ROOT, MEDIA_URL, DEBUG
+from django.conf.urls.static import static
+
+if DEBUG:
+    urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
+

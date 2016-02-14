@@ -1,1 +1,6 @@
 Django
+Pillow
+django-image-cropping
+easy-thumbnails
+
+

@@ -1,0 +1,32 @@
+{% extends 'index.html'  %}
+
+{% block center %}
+
+<div class="primary col-md-8 col-sm-12 col-xs-12">
+
+    {% for p in pages %}
+    <section class="about section">
+        <div class="section-inner">
+            <h2 class="heading">{{ p.title  }}</h2>
+            <div class="content">
+                <p>{{ p.text  }}</p>    
+            </div><!--//content-->
+        </div><!--//section-inner-->                 
+    </section><!--//section-->
+    {% endfor  %}
+
+
+
+    
+    <section class="about section">
+        <div class="section-inner">
+                {% for i in gallery %}
+                  {{ i.get_thumbnail  }}
+                {% endfor  %}
+        </div><!--//section-inner-->                 
+    </section><!--//section-->
+   
+
+</div><!--//primary-->
+
+{% endblock  %}
